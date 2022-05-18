@@ -20,7 +20,7 @@ class RateLimit implements MiddlewareInterface
     {
         $throttler = Container::get(RateLimitHandler::class);
 
-        $config = config('plugin.sunsgne.rateLimit.app');
+        $config = config('plugin.sunsgne.rate-limit.app');
         $capacity = $config['capacity'] ?? 60;
         $seconds = $config['seconds'] ?? 60;
         $cost = $config['cost'] ?? 1;
