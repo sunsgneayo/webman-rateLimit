@@ -1,5 +1,5 @@
 <?php
-namespace Sunsgne\RateLimit;
+namespace sunsgne;
 
 class Install
 {
