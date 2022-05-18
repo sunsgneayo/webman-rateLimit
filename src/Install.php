@@ -1,12 +1,6 @@
 <?php
+namespace Sunsgne\RateLimit;
 
-namespace sunsgne;
-
-/**
- * @purpose
- * @date 2022/5/16
- * @author zhulianyou
- */
 class Install
 {
     const WEBMAN_PLUGIN = true;
@@ -15,8 +9,8 @@ class Install
      * @var array
      */
     protected static $pathRelation = array (
-        'config/plugin/sunsgne/rateLimit' => 'config/plugin/sunsgne/rateLimit',
-    );
+  'config/plugin/sunsgne/rate-limit' => 'config/plugin/sunsgne/rate-limit',
+);
 
     /**
      * Install
@@ -49,6 +43,7 @@ class Install
                     mkdir($parent_dir, 0777, true);
                 }
             }
+            //symlink(__DIR__ . "/$source", base_path()."/$dest");
             copy_dir(__DIR__ . "/$source", base_path()."/$dest");
             echo "Create $dest
 ";
@@ -75,5 +70,5 @@ class Install
             remove_dir($path);
         }
     }
-
+    
 }

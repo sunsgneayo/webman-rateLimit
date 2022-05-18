@@ -1,27 +1,27 @@
 {
-    "name": "sunsgne/rate-limit",
-    "description": "limit",
-    "type": "library",
-    "license": "MIT",
-    "autoload": {
-        "psr-4": {
-            "sunsgne\\": "src"
-        }
-    },
-    "authors": [
-        {
-            "name": "sunsgne a",
-            "email": "a@qq.com"
-        }
-    ],
-    "minimum-stability": "dev",
-    "require": {
-        "php": ">=7.4",
-        "php-di/php-di": "^6.3",
-        "illuminate/redis": "^8.2.0"
-    },
-    "require-dev": {
-        "phpunit/phpunit": "~7.0|~8.0|~9.0",
-        "workerman/webman": "^1.0"
+  "name": "sunsgne/rate-limit",
+  "description": "limit",
+  "type": "library",
+  "license": "MIT",
+  "autoload": {
+    "psr-4": {
+      "sunsgne\\": "src"
     }
+  },
+  "authors": [
+    {
+      "name": "sunsgne a",
+      "email": "a@qq.com"
+    }
+  ],
+  "minimum-stability": "dev",
+  "require": {
+    "php": ">=7.4",
+    "php-di/php-di": "^6.3",
+    "illuminate/redis": "^8.2.0"
+  },
+  "require-dev": {
+    "phpunit/phpunit": "~7.0|~8.0|~9.0",
+    "workerman/webman": "^1.0"
+  }
 }
