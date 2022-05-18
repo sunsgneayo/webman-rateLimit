@@ -15,7 +15,7 @@ class Install
      * @var array
      */
     protected static $pathRelation = array (
-        'config/plugin/sunsgne/rate-limit' => 'config/plugin/sunsgne/rate-limit',
+        'config/plugin/sunsgne/rateLimit' => 'config/plugin/sunsgne/rateLimit',
     );
 
     /**
