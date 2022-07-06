@@ -2,7 +2,7 @@
 
 **<p align="center">workbunny/webman-rateLimit</p>**
 
-**<p align="center">🐇 A PHP implementation of current limiting middleware for webman service HTTP-API 🐇</p>**
+**<p align="center">🦚 A PHP implementation of current limiting middleware for webman service HTTP-API 🦚</p>**
 
 # A PHP implementation of current limiting middleware for webman service HTTP-API
 
