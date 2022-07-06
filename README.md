@@ -1,3 +1,17 @@
+<p align="center"><img width="260px" src="https://chaz6chez.cn/images/workbunny-logo.png" alt="workbunny"></p>
+
+**<p align="center">workbunny/webman-rateLimit</p>**
+
+**<p align="center">🐇 A PHP implementation of current limiting middleware for webman service HTTP-API 🐇</p>**
+
+# A PHP implementation of current limiting middleware for webman service HTTP-API
+
+[![Latest Stable Version](http://poser.pugx.org/sunsgne/rate-limit/v)](https://packagist.org/packages/workbunny/webman-nacos)
+[![Total Downloads](http://poser.pugx.org/sunsgne/rate-limit/downloads)](https://packagist.org/packages/workbunny/webman-nacos)
+[![Latest Unstable Version](http://poser.pugx.org/sunsgne/rate-limit/v/unstable)](https://packagist.org/packages/workbunny/webman-nacos)
+[![License](http://poser.pugx.org/sunsgne/rate-limit/license)](https://packagist.org/packages/workbunny/webman-nacos)
+[![PHP Version Require](http://poser.pugx.org/sunsgne/rate-limit/require/php)](https://packagist.org/packages/workbunny/webman-nacos)
+
 # webman 服务限流
 
 > 基于illuminate/redis 的令牌桶限流中间件
