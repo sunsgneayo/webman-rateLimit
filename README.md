@@ -78,6 +78,10 @@ composer require sunsgne/rate-limit
 | 101    | 224     | 51      | 10      | 1004    | 70.1   |
 
 
-
+### 更新记录
+#### 1.1.2 - 2022-07-06
+##### 新增
+- redis 使用 `lua` 脚本加锁
+- 新增配置参数`concurrency`,可选并发限流
 
 
