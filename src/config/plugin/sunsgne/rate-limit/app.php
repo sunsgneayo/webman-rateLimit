@@ -2,8 +2,10 @@
 return [
     'enable'  => true,
     'default' => [
-        'capacity'    => 60, // The number of requests the "bucket" can hold
-        'seconds'     => 60,  // The time it takes the "bucket" to completely refill
+        /** The number of requests the "bucket" can hold || 每一个请求在redis的最大限度 */
+        'capacity'    => 100,
+        /** The time it takes the "bucket" to completely refill || redis key的过期时间  */
+        'seconds'     => 60,
         'cost'        => 1, // The number of tokens this action uses.
         'concurrency' => true,
         'customer'    => [

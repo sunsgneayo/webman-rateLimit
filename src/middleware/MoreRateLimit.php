@@ -2,6 +2,7 @@
 
 namespace sunsgne\middleware;
 
+use sunsgne\MoreRateLimitHandler;
 use support\Container;
 use Webman\Http\Request;
 use Webman\Http\Response;
@@ -17,7 +18,7 @@ class MoreRateLimit implements MiddlewareInterface
 
     public function process(Request $request, callable $handler): Response
     {
-        $moreRateLimit = Container::get(MoreRateLimit::class);
+        $moreRateLimit = Container::get(MoreRateLimitHandler::class);
 
         $config         = config('plugin.sunsgne.rate-limit.app.default');
         $capacity       = $config['capacity'] ?? 60;
