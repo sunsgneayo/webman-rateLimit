@@ -14,6 +14,6 @@
 
 return [
     '' => [
-        \sunsgne\middleware\RateLimit::class
+        config('plugin.sunsgne.rate-limit.app.default.concurrency') ? \sunsgne\middleware\MoreRateLimit::class : \sunsgne\middleware\RateLimit::class
     ]
 ];

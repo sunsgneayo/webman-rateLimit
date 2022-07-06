@@ -5,7 +5,7 @@ namespace sunsgne;
 use support\Redis;
 
 /**
- * @purpose
+ * @purpose 单进程时的限流处理
  * @date 2022/5/18
  * @author zhulianyou
  */
