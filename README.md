@@ -117,7 +117,7 @@ if (false === $moreRateLimit->handle(intval($capacity), intval($seconds))) {
 
 
 ### 更新记录
-#### 1.1.2 - 2022-07-06
+#### 1.1.3 - 2022-07-06
 ##### 新增
 - redis 使用 `lua` 脚本加锁
 
