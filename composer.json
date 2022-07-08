@@ -1,5 +1,5 @@
 {
-  "name": "sunsgne/rate-limit",
+  "name": "workbunny/rate-limit",
   "description": "limit",
   "type": "library",
   "license": "MIT",
@@ -10,14 +10,13 @@
   },
   "authors": [
     {
-      "name": "sunsgne a",
-      "email": "a@qq.com"
+      "name": "sunsgne wang",
+      "email": "1129371285@qq.com"
     }
   ],
   "minimum-stability": "dev",
   "require": {
     "php": ">=7.4",
-    "php-di/php-di": "^6.3",
     "illuminate/redis": "^8.2.0",
     "ext-json": "*"
   },

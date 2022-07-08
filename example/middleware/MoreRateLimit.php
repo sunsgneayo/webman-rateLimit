@@ -20,10 +20,16 @@ class MoreRateLimit implements MiddlewareInterface
     {
         $moreRateLimit = Container::get(MoreRateLimitHandler::class);
 
-        $config         = config('plugin.sunsgne.rate-limit.app.default');
-        $capacity       = $config['capacity'] ?? 60;
-        $seconds        = $config['seconds'] ?? 60;
-        $customerHandle = $config['customer'];
+        $capacity       =  60;
+        $seconds        =  60;
+        $customerHandle = [
+            'class'       => \support\Response::class,
+            'constructor' => [
+                429,
+                array(),
+                json_encode(['success' => false, 'msg' => '请求次数太频繁'], 256),
+            ],
+        ];
 
 
         if (false === $moreRateLimit->handle(intval($capacity), intval($seconds))) {

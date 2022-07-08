@@ -23,24 +23,48 @@ composer require sunsgne/rate-limit
 ```
 
 ## 使用
-> 在 `config/plugin/sunsgne/rate-limit/app.php`中配置
+> 在 `webman`中使用
 ```php
-    'default' => [
-        /** The number of requests the "bucket" can hold || “桶”可以容纳的请求数 */
-        'capacity'    => 100,
-        /** The time it takes the "bucket" to completely refill || “桶”完全重新装满所需的时间  */
-        'seconds'     => 60,
-        'cost'        => 1, //使用的令牌数 
-        'concurrency' => true, //开启并发限流
-        'customer'    => [
-            'class'       => \support\Response::class, //需要进行限流的处理的回调类
-            'constructor' => [
-                429, // HTTP状态码
-                array(), // response header参数
-                json_encode(['success' => false, 'msg' => '请求次数太频繁'], 256), // response Body参数
-            ],
-        ],
+$moreRateLimit = Container::get(MoreRateLimitHandler::class);
+
+$capacity       =  60;
+$seconds        =  60;
+$customerHandle = [
+    'class'       => \support\Response::class,
+    'constructor' => [
+        429,
+        array(),
+        json_encode(['success' => false, 'msg' => '请求次数太频繁'], 256),
     ],
+];
+
+
+if (false === $moreRateLimit->handle(intval($capacity), intval($seconds))) {
+    $newClass = $customerHandle['class'];
+    return new $newClass(... \array_values($customerHandle['constructor']));
+}
+return $handler($request);
+```
+
+> 直接使用
+```php
+$moreRateLimit = new \sunsgne\middleware\MoreRateLimit();
+$capacity       =  60;
+$seconds        =  60;
+$customerHandle = [
+    'class'       => \support\Response::class,
+    'constructor' => [
+        429,
+        array(),
+        json_encode(['success' => false, 'msg' => '请求次数太频繁'], 256),
+    ],
+];
+
+
+if (false === $moreRateLimit->handle(intval($capacity), intval($seconds))) {
+    $newClass = $customerHandle['class'];
+    return new $newClass(... \array_values($customerHandle['constructor']));
+}
 ```
 ### 参数示例
 | 参数名  | 示例  |  说明 |
@@ -54,7 +78,7 @@ composer require sunsgne/rate-limit
 ### 测试说明
 #### 不含数据库查询
 
-> 进程数`24`,`concurrency=>ture`,无业务逻辑
+> 进程数`24`,`moreRateLimit`,无业务逻辑
 
 
 | 并发数    | 平均值(ms) | 中位数(ms) | 最小值(ms) | 最大值(ms) | 吞吐量    |
@@ -64,7 +88,7 @@ composer require sunsgne/rate-limit
 | 10001  | 1600    | 2140    | 0       | 3249    | 1643.0 |
 
 
-> 进程数`24`,`concurrency=>fasle`,无业务逻辑
+> 进程数`24`,`RateLimit`,无业务逻辑
 
 
 | 并发数    | 平均值(ms) | 中位数(ms) | 最小值(ms) | 最大值(ms) | 吞吐量    |
@@ -75,7 +99,7 @@ composer require sunsgne/rate-limit
 
 #### 数据库查询
 
-> 进程数`24`,`concurrency=>ture`
+> 进程数`24`,`moreRateLimit`
 
 
 | 并发数    | 平均值(ms) | 中位数(ms) | 最小值(ms) | 最大值(ms) | 吞吐量    |
@@ -84,7 +108,7 @@ composer require sunsgne/rate-limit
 
 
 
-> 进程数`24`,`concurrency=>fasle`
+> 进程数`24`,`RateLimit`
 
 
 | 并发数    | 平均值(ms) | 中位数(ms) | 最小值(ms) | 最大值(ms) | 吞吐量    |
@@ -96,6 +120,5 @@ composer require sunsgne/rate-limit
 #### 1.1.2 - 2022-07-06
 ##### 新增
 - redis 使用 `lua` 脚本加锁
-- 新增配置参数`concurrency`,可选并发限流
 
 

@@ -100,7 +100,7 @@ class RateLimitHandler
      *
      * @internal param int $maxRequests
      */
-    public function build(string $key, int $capacity, int $seconds, int $cost): bool
+    public function handle(string $key, int $capacity, int $seconds, int $cost): bool
     {
         $lave = $this->prefix . $key . $this->numSuffix;
         $time = $this->prefix . $key . $this->timeSuffix;

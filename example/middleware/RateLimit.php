@@ -20,13 +20,19 @@ class RateLimit implements MiddlewareInterface
     {
         $throttler = Container::get(RateLimitHandler::class);
 
-        $config         = config('plugin.sunsgne.rate-limit.app.default');
-        $capacity       = $config['capacity'] ?? 60;
-        $seconds        = $config['seconds'] ?? 60;
-        $cost           = $config['cost'] ?? 1;
-        $customerHandle = $config['customer'];
+        $capacity       =  60;
+        $seconds        =  60;
+        $cost           =  1;
+        $customerHandle = [
+            'class'       => \support\Response::class,
+            'constructor' => [
+                429,
+                array(),
+                json_encode(['success' => false, 'msg' => '请求次数太频繁'], 256),
+            ],
+        ];
 
-        if ($throttler->build($request->getRemoteIp(), $capacity, $seconds, $cost) === false) {
+        if ($throttler->handle($request->getRemoteIp(), $capacity, $seconds, $cost) === false) {
             $newClass = $customerHandle['class'];
             return new $newClass(... \array_values($customerHandle['constructor']));
         }
