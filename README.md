@@ -1,6 +1,6 @@
 <p align="center"><img width="260px" src="https://chaz6chez.cn/images/workbunny-logo.png" alt="workbunny"></p>
 
-**<p align="center">workbunny/webman-rateLimit</p>**
+**<p align="center">workbunny/rate-limit</p>**
 
 **<p align="center">🐬 A PHP implementation of current limiting middleware for webman service HTTP-API 🐬</p>**
 
@@ -19,7 +19,7 @@
 ## 安装
 
 ```sh
-composer require sunsgne/rate-limit
+composer require workbunny/rate-limit
 ```
 
 ## 使用
