@@ -47,4 +47,9 @@ luascript;
 
     }
 
+    public function guaranteeSqlite3()
+    {
+
+    }
+
 }
