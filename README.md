@@ -1,6 +1,6 @@
 <p align="center"><img width="260px" src="https://chaz6chez.cn/images/workbunny-logo.png" alt="workbunny"></p>
 
-**<p align="center">workbunny/rate-limit</p>**
+**<p align="center">sunsgne/rate-limit</p>**
 
 **<p align="center">🐬 A PHP implementation of current limiting middleware for webman service HTTP-API 🐬</p>**
 
