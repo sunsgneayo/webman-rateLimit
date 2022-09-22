@@ -19,7 +19,7 @@
 ## 安装
 
 ```sh
-composer require workbunny/rate-limit
+composer require sunsgne/rate-limit
 ```
 
 ## 使用
