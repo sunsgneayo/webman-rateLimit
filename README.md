@@ -1,16 +1,20 @@
-<!-- <p align="center"><img width="260px" src="https://chaz6chez.cn/images/workbunny-logo.png" alt="workbunny"></p> -->
+<div align="center" style="border-radius: 50px">
+    <img width="260px"  src="https://cdn.sunsgne.top/logo-i.png" alt="sunsgne">
+</div>
 
 **<p align="center">sunsgne/rate-limit</p>**
 
 **<p align="center">🐬 A PHP implementation of current limiting middleware for webman service HTTP-API 🐬</p>**
 
-# A PHP implementation of current limiting middleware for webman service HTTP-API
-
-[![Latest Stable Version](http://poser.pugx.org/sunsgne/rate-limit/v)](https://packagist.org/packages/workbunny/webman-nacos)
-[![Total Downloads](http://poser.pugx.org/sunsgne/rate-limit/downloads)](https://packagist.org/packages/workbunny/webman-nacos)
-[![Latest Unstable Version](http://poser.pugx.org/sunsgne/rate-limit/v/unstable)](https://packagist.org/packages/workbunny/webman-nacos)
-[![License](http://poser.pugx.org/sunsgne/rate-limit/license)](https://packagist.org/packages/workbunny/webman-nacos)
-[![PHP Version Require](http://poser.pugx.org/sunsgne/rate-limit/require/php)](https://packagist.org/packages/workbunny/webman-nacos)
+<div align="center">
+    
+[![Latest Stable Version](http://poser.pugx.org/sunsgne/rate-limit/v)](https://packagist.org/packages/sunsgne/rate-limit)
+[![Total Downloads](http://poser.pugx.org/sunsgne/rate-limit/downloads)](https://packagist.org/packages/sunsgne/rate-limit)
+[![Latest Unstable Version](http://poser.pugx.org/sunsgne/rate-limit/v/unstable)](https://packagist.org/packages/sunsgne/rate-limit)
+[![License](http://poser.pugx.org/sunsgne/rate-limit/license)](https://packagist.org/packages/sunsgne/rate-limit)
+[![PHP Version Require](http://poser.pugx.org/sunsgne/rate-limit/require/php)](https://packagist.org/packages/sunsgne/rate-limit)
+    
+</div>
 
 # webman 服务限流
 
